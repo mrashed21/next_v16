@@ -1,5 +1,5 @@
 import { Roles } from "@/hooks/role";
-import { userService } from "@/service/user.service";
+import { userService } from "@/service/user-service";
 import { NextRequest, NextResponse } from "next/server";
 
 const ROLE_BASE_ROUTE: Record<string, string> = {

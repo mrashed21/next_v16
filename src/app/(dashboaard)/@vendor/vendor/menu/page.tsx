@@ -1,9 +1,9 @@
-import Menu from "@/components/vendor/menu/menu";
+// import Menu from "@/components/vendor/menu/menu";
 
 const MenuPage = () => {
   return (
     <section>
-      <Menu />
+      {/* <Menu /> */}
     </section>
   );
 };
