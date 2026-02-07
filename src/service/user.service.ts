@@ -1,3 +1,4 @@
+import { API_URL } from "@/utils/api-url";
 import { cookies } from "next/headers";
 
 export const userService = {
@@ -5,8 +6,7 @@ export const userService = {
     try {
       const cookieStore = cookies();
 
-      const url =
-        "/get-session";
+      const url = `${API_URL.AUTH_URL}/get-session`;
 
       const res = await fetch(url, {
         method: "GET",

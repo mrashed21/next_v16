@@ -24,7 +24,7 @@ const UserMenu = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button className="flex items-center gap-2 rounded-md px-2 py-1 hover:bg-muted">
+        <button className="flex items-center gap-2 rounded-md px-2 py-1 hover:bg-muted cursor-pointer">
           <Avatar className="h-8 w-8">
             <AvatarImage src={user.avatar} />
             <AvatarFallback>{user.name.charAt(0)}</AvatarFallback>
