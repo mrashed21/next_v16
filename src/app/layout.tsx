@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 
+import "bd-number-validator/react/style.css";
 import { Toaster } from "sonner";
 import "./globals.css";
 const geistSans = Geist({

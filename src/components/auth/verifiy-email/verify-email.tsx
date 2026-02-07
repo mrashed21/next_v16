@@ -1,5 +1,6 @@
 "use client";
 
+import { API_URL } from "@/utils/api-url";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import { toast } from "sonner";
@@ -18,7 +19,7 @@ const VerifyEmail = () => {
 
       try {
         const res = await fetch(
-          `https://backend-foodhub-mrashed21.vercel.app/api/auth/verify-email?token=${token}`,
+          `${API_URL.AUTH_URL}/verify-email?token=${token}`,
           {
             method: "GET",
             credentials: "include",
