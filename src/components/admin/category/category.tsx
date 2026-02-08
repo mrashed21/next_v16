@@ -1,6 +1,6 @@
 "use client";
 
-import { getcategoryForAdmin } from "@/actions/category-action";
+import { getCategoryForAdmin } from "@/actions/category-action";
 import Header from "@/components/custom/header";
 import { SearchField } from "@/components/custom/search-field";
 import { Button } from "@/components/ui/button";
@@ -25,7 +25,7 @@ const Category = () => {
   const fetchData = async () => {
     try {
       setIsLoading(true);
-      const res = await getcategoryForAdmin(search, page, limit);
+      const res = await getCategoryForAdmin(search, page, limit);
 
       if (!res?.success) {
         throw new Error(res?.message);
@@ -45,8 +45,6 @@ const Category = () => {
 
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
-
-  console.log(data);
 
   // *dynamic serial with page, limit
   const serialNumber = useSerialNumber(page, limit);

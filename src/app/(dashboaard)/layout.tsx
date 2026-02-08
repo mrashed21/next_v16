@@ -22,7 +22,7 @@ const DashboardLayout = ({
       <main className="flex min-h-screen w-full">
         <AppSidebar role={userInfo.role as any} />
 
-        <main className="flex-1 space-y-4 ">
+        <main className="flex-1 space-y-4 overflow-auto">
           <DashboardHeader />
 
           {userInfo.role === "user" && user}

@@ -32,7 +32,7 @@ export const categoryService = {
   },
 
   //   ! get category for admin with search,page , limit
-  getcategoryForAdmin: async function (
+  getCategoryForAdmin: async function (
     search: string,
     page: number,
     limit: number,
@@ -46,6 +46,7 @@ export const categoryService = {
           headers: {
             "Content-Type": "application/json",
             Cookie: cookie.toString(),
+            credentials: "include",
           },
           cache: "no-store",
         },
@@ -86,6 +87,7 @@ export const categoryService = {
         headers: {
           "Content-Type": "application/json",
           Cookie: cookie.toString(),
+          credentials: "include",
         },
         body: JSON.stringify(payload),
       });
@@ -127,6 +129,7 @@ export const categoryService = {
         headers: {
           "Content-Type": "application/json",
           Cookie: cookie.toString(),
+          credentials: "include",
         },
         body: JSON.stringify({ name, categoryImage, id }),
       });
@@ -163,6 +166,7 @@ export const categoryService = {
         headers: {
           "Content-Type": "application/json",
           Cookie: cookie.toString(),
+          credentials: "include",
         },
         body: JSON.stringify({ id }),
       });

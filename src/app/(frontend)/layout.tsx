@@ -1,5 +1,14 @@
+import Footer from "@/common/footer/footer";
+import Navbar from "@/common/navbar/navbar";
+
 const FrontendLayout = ({ children }: { children: React.ReactNode }) => {
-  return <main>{children}</main>;
+  return (
+    <>
+      <Navbar />
+      <main>{children}</main>
+      <Footer />
+    </>
+  );
 };
 
 export default FrontendLayout;

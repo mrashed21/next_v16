@@ -31,9 +31,6 @@ const CategoryTable = ({
   serialNumber,
   handleEdit,
 }: CategoryTableProps) => {
-  // const { mutateAsync: deleteCategory, isPending } = useDeleteCategory();
-
-  console.log(categoryData);
   const [open, setOpen] = useState(false);
   const [selectedId, setSelectedId] = useState<string | null>(null);
 
@@ -45,7 +42,6 @@ const CategoryTable = ({
     if (!selectedId) return;
 
     try {
-      // await deleteCategory(selectedId);
       toast.success("Category deleted successfully");
       setOpen(false);
       setSelectedId(null);
